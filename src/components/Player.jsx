@@ -13,7 +13,7 @@ const Player = () => {
   const [isVolumeVisible, setIsVolumeVisible] = useState(false);
 
   return (
-    <div className="fixed bottom-4 right-0 left-0  bg-[#f5f5f5ff] flex flex-col">
+    <div className="fixed bottom-0 right-0 left-0  bg-[#f5f5f5ff] flex flex-col">
       <input
         type="range"
         name="progress"
