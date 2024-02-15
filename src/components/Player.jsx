@@ -1,4 +1,3 @@
-import React from "react";
 import { BiRepeat } from "react-icons/bi";
 import { IoMdSkipBackward } from "react-icons/io";
 import { IoMdSkipForward } from "react-icons/io";
@@ -7,8 +6,12 @@ import { FaPlay, FaPause } from "react-icons/fa";
 // import { FaPause } from "react-icons/fa6";
 import { HiSpeakerWave } from "react-icons/hi2";
 import { MdFileDownload } from "react-icons/md";
+import VolumeController from "./VolumeController";
 
+import React, { useState } from "react";
 const Player = () => {
+  const [isVolumeVisible, setIsVolumeVisible] = useState(false);
+
   return (
     <div className="fixed bottom-4 right-0 left-0  bg-[#f5f5f5ff] flex flex-col">
       <input
@@ -43,9 +46,14 @@ const Player = () => {
           <PiShuffleBold className="text-gray-500 cursor-pointer hover:text-gray-700" />
         </div>
 
-        <div className="flex justify-end items-center w-[30vh">
+        <div className="flex justify-end items-center w-[30vh]">
           <MdFileDownload className="text-gray-500 hover:text-gray-600 text-2xl lg:text-3xl cursor-pointer lg:mr-2" />
-          <HiSpeakerWave className=" hidden lg:flex text-gray-500 hover:text-gray-600 text-2xl lg:text-3xl cursor-pointer" />
+          <HiSpeakerWave
+            className=" hidden lg:block text-gray-500 hover:text-gray-600 text-2xl lg:text-3xl cursor-pointer"
+            onMouseEnter={() => setIsVolumeVisible(true)}
+            onMouseLeave={() => setIsVolumeVisible(false)}
+          />
+          <VolumeController isVolumeVisible={isVolumeVisible} />
         </div>
       </div>
     </div>
