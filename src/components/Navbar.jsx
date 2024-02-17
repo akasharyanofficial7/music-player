@@ -13,7 +13,7 @@ const Navbar = () => {
             width={37}
           />
           <Link to="/" className="font-extrabold text-lg jiosaavan">
-            JioSaavn
+            SSeries
           </Link>
         </div>
         <div className="flex text-[24px] lg:text-[15px] gap-5 text-white font-semibold h-full">
