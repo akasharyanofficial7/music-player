@@ -8,10 +8,7 @@
     scroll-behavior: smooth;
 }
 
-body {
-    font-family: "Roboto", sans-serif;
-    background-color: #f5f5f5ff;
-}
+
 
 /* Range input styles */
 input[type="range"] {
@@ -42,4 +39,85 @@ input[type="range"]::-webkit-slider-thumb {
 .scroll-hide::-webkit-scrollbar {
     width: 0px;
     background: transparent;
+}
+
+
+
+
+/* Light mode styles */
+/* Light mode styles */
+/* Base styles */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Dark mode */
+.dark {
+    background-color: #111;
+    color: #fff;
+}
+
+/* Default color for JioSaavn */
+.jiosaavan {
+    color: gray;
+}
+
+/* Dark mode toggle */
+.dark-mode-toggle {
+    position: fixed;
+    top: 15px;
+    right: 300px;
+    z-index: 1000;
+    color: #111;
+    padding: 6px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 400;
+    border: 1px solid black;
+    background-color: #fff;
+}
+
+/* .dark-mode-toggle:hover {
+    color: #111;
+    background-color: #fff;
+} */
+
+/* Light mode toggle */
+.light-mode-toggle {
+    position: fixed;
+    top: 15px;
+    right: 300px;
+    z-index: 1000;
+    color: #111;
+    padding: 6px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 400;
+    border: 1px solid #fff;
+    background-color: #fff;
+}
+
+/* .light-mode-toggle:hover {
+    color: #111;
+    background-color: #fff;
+} */
+
+/* Media queries */
+@media screen and (max-width: 600px) {
+
+    .dark-mode-toggle,
+    .light-mode-toggle {
+        right: 15px;
+        top: 40px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+    .dark-mode-toggle,
+    .light-mode-toggle {
+        right: 200px;
+    }
 }
