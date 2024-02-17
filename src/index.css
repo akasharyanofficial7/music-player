@@ -111,6 +111,7 @@ body {
     .light-mode-toggle {
         right: 15px;
         top: 40px;
+        padding: 2px 5px;
     }
 }
 

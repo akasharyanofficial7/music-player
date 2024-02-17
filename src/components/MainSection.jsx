@@ -32,7 +32,7 @@ const MainSection = () => {
   return (
     <>
       <section className="my-20 lg:my-16">
-        <h2 className="text-xl px-5 py-3 font-semibold text-gray-500 w-full lg:w-[78vw] mx-auto trending">
+        <h2 className="text-xl px-5 py-3 font-semibold text-gray-500 w-14 lg:w-[78vw] mx-auto trending">
           Trending Now
         </h2>
         <Slider data={trendingAlbums} />

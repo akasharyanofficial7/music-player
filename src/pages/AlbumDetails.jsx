@@ -33,7 +33,7 @@ const AlbumDetails = () => {
     <>
       <Navbar />
 
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-24 h-screen my-48 lg:my-0 mx-2 lg:mx-auto">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-24 h-screen my-16 lg:my-0 mx-2 lg:mx-auto">
         <div>
           <img
             src={image}

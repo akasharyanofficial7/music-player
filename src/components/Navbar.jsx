@@ -16,7 +16,7 @@ const Navbar = () => {
             SSeries
           </Link>
         </div>
-        <div className="flex text-[24px] lg:text-[15px] gap-5 text-white font-semibold h-full">
+        <div className="flex text-[15px] lg:text-[15px] gap-5 text-white font-semibold h-full">
           <li className="list-none">Music</li>
           <li className="list-none">Podcasts</li>
           <li className="list-none">Go Pro</li>
