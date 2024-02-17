@@ -23,7 +23,7 @@ const Slider = ({ data }) => {
         onClick={scrollLeft}
       />
       <div
-        className="grid grid-rows-4 lg:grid-rows-2 grid-flow-col-dense gap-4 lg:gap-4 justify-between items-center overflow-x-scroll w-full 
+        className="grid grid-rows-2 lg:grid-rows-2 grid-flow-col-dense gap-4 lg:gap-4 justify-between items-center overflow-x-scroll w-full 
       lg:w-[78] px-5 scroll-hide"
         ref={scrollRef}
       >

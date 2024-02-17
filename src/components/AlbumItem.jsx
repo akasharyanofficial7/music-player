@@ -8,12 +8,17 @@ const AlbumItem = ({ name, artists, id, image }) => {
       className="w-[160px] max-h-[220px] overflow-y-clip flex flex-col justify-center items-center gap-3 rounded-lg"
     >
       <img src={image[2].link} alt="Album Cover" className="rounded-lg" />
-      <div className="text-[13px] w-full flex flex-col justify-center items-center">
+      <div className="text-xs w-full flex flex-col justify-center items-center">
         <span className="text-gray-600 font-semibold overflow-x-clip">
-          {name}
+          {name.slice(0, 15)}
         </span>
         <p className="text-gray-500 font-thin">
-          {artists.map((artist) => artist.name).join(",")}
+          {artists.map((artist) => artist.name).join(", ").length > 24
+            ? artists
+                .map((artist) => artist.name)
+                .join(", ")
+                .slice(0, 24) + "..."
+            : artists.map((artist) => artist.name).join(", ")}
         </p>
       </div>
     </Link>
