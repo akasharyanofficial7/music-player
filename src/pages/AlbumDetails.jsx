@@ -41,7 +41,7 @@ const AlbumDetails = () => {
             width={250}
             className="mx-auto mb-4 rounded-lg"
           />
-          <div className="w-[250px] text-gray-600">
+          <div className="w-[250px]  ">
             <h1>{album.name}</h1>
             <p>
               by {album.primaryArtists} . {album.songCount} songs

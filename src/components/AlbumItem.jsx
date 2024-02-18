@@ -9,10 +9,10 @@ const AlbumItem = ({ name, artists, id, image }) => {
     >
       <img src={image[2].link} alt="Album Cover" className="rounded-lg" />
       <div className="text-xs w-full flex flex-col justify-center items-center">
-        <span className="text-gray-500 font-semibold overflow-x-clip">
+        <span className="  font-semibold overflow-x-clip">
           {name.slice(0, 15)}
         </span>
-        <p className="text-gray-500 font-thin">
+        <p className="  font-thin">
           {artists.map((artist) => artist.name).join(", ").length > 24
             ? artists
                 .map((artist) => artist.name)

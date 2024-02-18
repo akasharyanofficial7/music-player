@@ -11,7 +11,7 @@ const MainSection = () => {
     const getHomePageData = async () => {
       try {
         const res = await axios.get(
-          "https://saavn.dev/modules?language=hindi,punjabi"
+          `https://saavn.dev/modules?language=hindi,english,punjabi,bhojpuri,tamil&page=${180}&pageSize=${120}`
         );
         const { data } = res.data;
         setAlbums(data.albums);
@@ -32,15 +32,15 @@ const MainSection = () => {
   return (
     <>
       <section className="my-20 lg:my-16">
-        <h2 className="text-xl px-5 py-3 font-semibold text-gray-500 w-14 lg:w-[78vw] mx-auto trending">
-          Trending Now
+        <h2 className="text-xl px-5 py-3 font-semibold    w-14 lg:w-[78vw] mx-auto trending">
+          Trending
         </h2>
         <Slider data={trendingAlbums} />
-        <h2 className="text-xl px-5 py-3 font-semibold text-gray-500 w-full lg:w-[78vw] mx-auto">
+        <h2 className="text-xl px-5 py-3 font-semibold   w-full lg:w-[78vw] mx-auto">
           Top Albums
         </h2>
         <Slider data={albums} />
-        <h2 className="text-xl px-5 py-3 font-semibold text-gray-500 w-full lg:w-[78vw] mx-auto">
+        <h2 className="text-xl px-5 py-3 font-semibold   w-full lg:w-[78vw] mx-auto">
           All BlockBuster
         </h2>
         <Slider data={albums} />

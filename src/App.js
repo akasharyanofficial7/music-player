@@ -4,10 +4,11 @@ import Home from "./pages/Home";
 import AlbumDetails from "./pages/AlbumDetails";
 import MusicContext from "./context/MusicContext";
 import { useState } from "react";
+import About from "./pages/About";
 function App() {
   const [songs, setSongs] = useState([]);
   const [isPlaying, setIsplaying] = useState(false);
-  const [currentSong, setCurrentSong] = useState(null);
+  const [currentSong, setCurrentSong] = useState();
   const [searchedSongs, setSearchedSongs] = useState([]);
 
   const playMusic = async (
@@ -41,8 +42,37 @@ function App() {
         primaryArtists,
       });
       setIsplaying(true);
-      console.log(currentSong);
       await newAudio.play();
+    }
+  };
+
+  const nextSong = () => {
+    if (currentSong) {
+      const index = songs.findIndex((song) => song.id === currentSong.id);
+      if (index === songs.length - 1) {
+        const { downloadUrl, name, duration, image, id, primaryArtists } =
+          songs[0];
+        playMusic(downloadUrl, name, duration, image, id, primaryArtists);
+      } else {
+        const { downloadUrl, name, duration, image, id, primaryArtists } =
+          songs[index + 1];
+        playMusic(downloadUrl, name, duration, image, id, primaryArtists);
+      }
+    }
+  };
+
+  const prevSong = () => {
+    if (currentSong) {
+      const index = songs.findIndex((song) => song.id === currentSong.id);
+      if (index === 0) {
+        const { downloadUrl, name, duration, image, id, primaryArtists } =
+          songs[songs.length - 1];
+        playMusic(downloadUrl, name, duration, image, id, primaryArtists);
+      } else {
+        const { downloadUrl, name, duration, image, id, primaryArtists } =
+          songs[index - 1];
+        playMusic(downloadUrl, name, duration, image, id, primaryArtists);
+      }
     }
   };
 
@@ -54,6 +84,8 @@ function App() {
         playMusic,
         isPlaying,
         currentSong,
+        nextSong,
+        prevSong,
         setSearchedSongs,
         searchedSongs,
       }}
@@ -61,6 +93,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/albums/:id" element={<AlbumDetails />} />
         </Routes>
       </BrowserRouter>
