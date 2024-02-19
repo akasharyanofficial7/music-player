@@ -5,6 +5,9 @@ import AlbumDetails from "./pages/AlbumDetails";
 import MusicContext from "./context/MusicContext";
 import { useState } from "react";
 import About from "./pages/About";
+import EnglishHome from "./pages/EnglishHome";
+import HindiHome from "./pages/HindiHome";
+import Login from "./components/Login";
 function App() {
   const [songs, setSongs] = useState([]);
   const [isPlaying, setIsplaying] = useState(false);
@@ -93,6 +96,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/english" element={<EnglishHome />} />
+          <Route path="/hindi" element={<HindiHome />} />
           <Route path="/about" element={<About />} />
           <Route path="/albums/:id" element={<AlbumDetails />} />
         </Routes>

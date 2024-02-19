@@ -18,6 +18,8 @@ input[type="range"] {
     background-color: #e8e8e8ff;
 }
 
+
+
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     /* Ensure consistency with vendor prefix */
@@ -110,7 +112,7 @@ body {
     .dark-mode-toggle,
     .light-mode-toggle {
         right: 15px;
-        top: 40px;
+        top: 55px;
         padding: 2px 5px;
     }
 }
@@ -120,5 +122,8 @@ body {
     .dark-mode-toggle,
     .light-mode-toggle {
         right: 200px;
+        right: 15px;
+        top: 55px;
+        padding: 2px 5px;
     }
 }

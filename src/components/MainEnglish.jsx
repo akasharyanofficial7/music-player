@@ -3,7 +3,7 @@ import axios from "axios";
 import Slider from "./Slider";
 import Footer from "./Footer";
 
-const MainSection = () => {
+const MainEnglish = () => {
   const [albums, setAlbums] = useState([]);
   const [trending, setTrending] = useState([]);
 
@@ -11,7 +11,7 @@ const MainSection = () => {
     const getHomePageData = async () => {
       try {
         const res = await axios.get(
-          `https://saavn.dev/modules?language=hindi,english,punjabi,bhojpuri,tamil&page=${180}&pageSize=${120}`
+          `https://saavn.dev/modules?language=english,french`
         );
         const { data } = res.data;
         setAlbums(data.albums);
@@ -32,16 +32,12 @@ const MainSection = () => {
   return (
     <>
       <section className="my-20 lg:my-16">
-        <h2 className="text-xl px-5 pt-8 pb-4 font-semibold   items-center  w-14 lg:w-[78vw] mx-auto trending">
-          Trending
+        <h2 className="text-xl px-5 py-8 font-semibold   w-full lg:w-[78vw] mx-auto">
+          English music
         </h2>
         <Slider data={trendingAlbums} />
         <h2 className="text-xl px-5 py-5 font-semibold   w-full lg:w-[78vw] mx-auto">
           Top Albums
-        </h2>
-        <Slider data={albums} />
-        <h2 className="text-xl px-5 py-5 font-semibold   w-full lg:w-[78vw] mx-auto">
-          All BlockBuster
         </h2>
         <Slider data={albums} />
       </section>
@@ -50,4 +46,4 @@ const MainSection = () => {
   );
 };
 
-export default MainSection;
+export default MainEnglish;

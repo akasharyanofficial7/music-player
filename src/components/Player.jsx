@@ -91,33 +91,35 @@ const Player = () => {
         value={0}
         ref={inputRef}
         onChange={handleProgressChange}
-        className="w-full h-[5px] text-green-400 range"
+        className="w-full h-[5px] text-[#46c7b6ff] range"
       />
 
       <div className="flex justify-between items-center px-3 mb-3">
-        <div className="flex justify-start items-center gap-3 lg:w-[30vw]">
+        <div className="flex justify-start items-center gap-3   lg:w-[30vw]">
           <img
             src={currentSong?.image}
             alt=""
-            width={55}
+            width={50}
             className="rounded-lg"
           />
-          <div className="hidden lg:block">
-            <span className=" text-green-500">{currentSong?.name}</span>
+          <div className="  w-auto lg:block">
+            <span className=" text-teal-600 text-xs text-nowrap lg:text-lg mr-2">
+              {currentSong?.name.slice(0, 16)}
+            </span>
             <p className="text-xs text-gray-500">
-              {currentSong?.primaryArtists}
+              {currentSong?.primaryArtists.slice(0, 16)}
             </p>
           </div>
         </div>
-        <div className="flex items-center text-2xl lg:text-3xl  justify-center lg:justify-start lg:w-[40vw]  gap-4 lg:gap-6">
-          <BiRepeat className="text-gray-500 cursor-pointer hover:text-gray-700" />
+        <div className="flex items-center   text-sm  lg:text-2xl justify-center lg:justify-start lg:w-[40vw]  gap-4 lg:gap-6">
+          <BiRepeat className="text-gray-500 cursor-pointer hover:text-gray-700    ml-16" />
           <IoMdSkipBackward
             onClick={prevSong}
             className="text-gray-700 hover:text-gray-500 cursor-pointer"
           />
           {isPlaying ? (
             <FaPause
-              className="text-gray-700 hover:text-gray-500 cursor-pointer"
+              className="text-gray-700 hover:text-gray-500 cursor-pointer "
               onClick={() =>
                 playMusic(
                   currentSong?.audio,
