@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { useState } from "react";
 
 const Navbar = () => {
+  const path = useLocation().pathname;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Function to toggle the menu
@@ -23,16 +24,21 @@ const Navbar = () => {
           />
           <Link
             to="/"
-            className="font-extrabold text-lg  lg:text-2xl jiosaavan text-orange-600 font-serif"
+            className="font-extrabold   jiosaavan text-orange-600 font-serif"
           >
             <h1>
-              <span className="font-semibold">S</span>
-              <span className="text-gray-400">series</span>
+              <span className="font-semibold text-xl  lg:text-4xl">S</span>
+              <span className="text-gray-400 text-lg  lg:text-xl">Series</span>
             </h1>
           </Link>
         </Link>
-        <div className="flex  pl-0 lg:pl-24 hover:text-gray-600 ">
-          <Link to="/about" className="text-white font-semibold">
+        <div className="flex  pl-0 lg:pl-24   ">
+          <Link
+            to="/about"
+            className={`   font-semibold ${
+              path === "/about" ? "text-teal-500" : "text-white"
+            }`}
+          >
             About
           </Link>
         </div>
@@ -70,7 +76,6 @@ const Navbar = () => {
           {/* Dropdown menu for song languages */}
           {isMenuOpen && (
             <div className="absolute top-full left-50 w-60 text-center text-sm  bg-white text-black py-2 px-4 shadow-lg rounded-lg">
-              {/* Change div elements to Link elements and add more music */}
               <Link to="/english" className="block py-1 hover:text-[#46c7b6ff]">
                 <hr className=" border-gray-300" />
                 English
@@ -88,15 +93,28 @@ const Navbar = () => {
                 Spanish
               </Link>
               <hr className=" border-gray-300" />
-              {/* Add more languages as needed */}
             </div>
           )}
         </div>
+
+        {/* 4th div */}
         <div className="flex text-[12px]  lg:text-[15px] gap-3 pb-6 lg:pb-0 text-white font-semibold">
-          <Link to="/login" className="list-none">
+          <Link
+            to="/login"
+            className={`flex-nowrap ${
+              path === "/login" ? "text-teal-500" : ""
+            }`}
+          >
             LogIn
           </Link>
-          <li className="list-none">SignUp</li>
+          <Link
+            to="/signup"
+            className={`flex-nowrap ${
+              path === "/signup" ? "text-teal-500" : ""
+            }`}
+          >
+            SignUp
+          </Link>
         </div>
       </div>
     </nav>

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Button, Label, TextInput } from "flowbite-react";
+import { Button, Checkbox, Label, TextInput } from "flowbite-react";
 
-const LogIn = () => {
+const SignUp = () => {
   const [formData, setFormData] = useState({});
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -22,7 +22,7 @@ const LogIn = () => {
                 <h1>
                   <span className="font-semibold text-4xl  lg:text-8xl">S</span>
                   <span className="text-gray-400 text-3xl  lg:text-4xl">
-                    series
+                    Series
                   </span>
                 </h1>
               </Link>
@@ -36,7 +36,18 @@ const LogIn = () => {
       </div>
       <div className="w-full md:w-2/3 md:ml-8">
         <div className="max-w-md mx-auto">
-          <div></div>
+          <div>
+            <div className="mb-2 block">
+              <Label htmlFor="username" value="Username" />
+            </div>
+            <TextInput
+              id="username"
+              type="text"
+              placeholder="Enter your username"
+              required
+              onChange={handleChange}
+            />
+          </div>
           <div>
             <div className="mb-2 block">
               <Label htmlFor="email" value="Your email" />
@@ -58,17 +69,19 @@ const LogIn = () => {
               type="password"
               required
               onChange={handleChange}
-              className="mb-4"
             />
           </div>
-
+          <div className="flex items-center gap-2 px-2 py-2">
+            <Checkbox id="remember" />
+            <Label htmlFor="remember">Remember me</Label>
+          </div>
           <Button type="submit" className="w-full">
             SignUp
           </Button>
 
           <div className="mt-2">
             <p>
-              Already have an account? <Link to="/signup">Sign in</Link>
+              Already have an account? <Link to="/login">Sign in</Link>
             </p>
           </div>
         </div>
@@ -77,4 +90,4 @@ const LogIn = () => {
   );
 };
 
-export default LogIn;
+export default SignUp;
