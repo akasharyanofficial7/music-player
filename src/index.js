@@ -16,13 +16,13 @@ function DarkModeWrapper() {
     <div className={isDarkMode ? "dark" : ""}>
       {isDarkMode ? (
         <MdLightMode
-          className="light-mode-toggle dark-mode-toggle  hover:text-teal-800  h-6  w-6  text-xs  lg:h-8  lg:w-12 hover:bg-gray-300"
+          className="light-mode-toggle dark-mode-toggle  hover:text-teal-800  h-7  w-6  text-xs  lg:h-8  lg:w-12 hover:bg-gray-300"
           onClick={toggleDarkMode}
           // size={35}
         />
       ) : (
         <MdDarkMode
-          className="dark-mode-toggle   text-xs    hover:text-teal-800   h-6   w-6   lg:h-8  lg:w-12 hover:bg-gray-300"
+          className="dark-mode-toggle   text-xs    hover:text-teal-800    h-7  w-6  lg:h-8  lg:w-12 hover:bg-gray-300"
           onClick={toggleDarkMode}
           // size={35}
         />

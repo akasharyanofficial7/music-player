@@ -101,8 +101,8 @@ body {
 
     .dark-mode-toggle,
     .light-mode-toggle {
-        right: 210px;
-        top: 12px;
+        right: 10px;
+        top: 65px;
         padding: 2px 5px;
 
     }

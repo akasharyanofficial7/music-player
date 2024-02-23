@@ -10,7 +10,7 @@ const MainSection = () => {
     const getHomePageData = async () => {
       try {
         const res = await axios.get(
-          `https://saavn.dev/modules?language=hindi,english,punjabi,bhojpuri,tamil&page=${180}&pageSize=${120}`
+          `https://saavn.dev/modules?language=hindi,punjabi,bhojpuri,tamil&page=${180}&pageSize=${120}`
         );
         const { data } = res.data;
         setAlbums(data.albums);
@@ -30,7 +30,7 @@ const MainSection = () => {
 
   return (
     <>
-      <section className=" my-16 lg:my-16">
+      <section className=" my-16 lg:my-16 pt-4">
         <h2 className="text-xl  pt-8 pb-4 font-semibold  dark:text-teal-700  items-center  w-14 lg:w-[78vw] mx-auto trending">
           Trending
         </h2>

@@ -153,7 +153,7 @@ const Header = () => {
           type="text"
           placeholder="Search..."
           rightIcon={AiOutlineSearch}
-          className=" "
+          className="w-[150px] lg:w-[300px]"
         />
       </form>
       {/* <div className="lg:hidden">
