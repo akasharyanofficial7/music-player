@@ -10,7 +10,7 @@ const SignUp = () => {
 
   console.log(formData);
   return (
-    <div className="  pt-20">
+    <div className="  pt-0     lg:pt-20">
       <div className="flex flex-col    m-6 rounded-md  pt-12 mx-16 my-16 lg:mx-16 lg:my-16 md:flex-row  justify-center items-center">
         <div className="w-full md:w-1/3">
           <div className="flex flex-col justify-center items-center ">

@@ -31,30 +31,32 @@ const AlbumDetails = () => {
 
   return (
     <>
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-24 h-screen my-16 lg:my-0 mx-2 lg:mx-auto">
-        <div>
-          <img
-            src={image}
-            alt={album.title}
-            width={250}
-            className="mx-auto mb-4 rounded-lg"
-          />
-          <div className="w-[250px]  ">
-            <h1>{album.name}</h1>
-            <p>
-              by {album.primaryArtists} . {album.songCount} songs
-            </p>
+      <div className="mt-24  lg:mt-0">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-24 h-screen my-16 lg:my-0 mx-2 lg:mx-auto">
+          <div>
+            <img
+              src={image}
+              alt={album.title}
+              width={250}
+              className="mx-auto mb-4 rounded-lg"
+            />
+            <div className="w-[250px]  ">
+              <h1>{album.name}</h1>
+              <p>
+                by {album.primaryArtists} . {album.songCount} songs
+              </p>
+            </div>
+          </div>
+
+          <div>
+            {album.songs?.map((song) => (
+              <SongList key={song.id} {...song} />
+            ))}
           </div>
         </div>
 
-        <div>
-          {album.songs?.map((song) => (
-            <SongList key={song.id} {...song} />
-          ))}
-        </div>
+        <Player />
       </div>
-
-      <Player />
     </>
   );
 };
