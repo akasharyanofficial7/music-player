@@ -106,7 +106,7 @@ const Header = () => {
   const path = useLocation().pathname;
 
   return (
-    <Navbar className="border-b-2 fixed top-0 left-0 right-0 z-50 ">
+    <Navbar className="border-b-2 border-slate-700 fixed top-0 left-0 right-0 z-50  bg-gray-900">
       <Link
         to="/"
         className="self-center   whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-teal-700    font-serif"
@@ -119,7 +119,7 @@ const Header = () => {
 
       <div className="flex justify-between items-center gap-1">
         <div className="flex justify-center gap-1 ">
-          <div>
+          <div className="text-white">
             <Dropdown label="Languages" inline>
               <Dropdown.Header className="font-semibold">
                 music list
@@ -174,14 +174,14 @@ const Header = () => {
         <Navbar.Link
           active={path === "/"}
           as={"div"}
-          className="text-sm font-semibold     lg:text-lg lg:font-semibold"
+          className="text-sm font-semibold  text-white    lg:text-lg lg:font-semibold"
         >
           <Link to="/">Home</Link>
         </Navbar.Link>
         <Navbar.Link
           active={path === "/about"}
           as={"div"}
-          className="text-sm font-semibold   lg:text-lg lg:font-semibold"
+          className="text-sm font-semibold   text-white     lg:text-lg lg:font-semibold"
         >
           <Link to="/about">About</Link>
         </Navbar.Link>

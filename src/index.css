@@ -50,20 +50,20 @@ input[type="range"]::-webkit-slider-thumb {
 /* Light mode styles */
 /* Base styles */
 body {
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #111;
+    color: #fff;
     font-family: "Roboto", sans-serif;
 }
 
 /* Dark mode */
 .dark {
-    background-color: #111;
-    color: #fff;
+    background-color: #fff;
+    color: #111;
 }
 
 
 /* Dark mode toggle */
-.dark-mode-toggle {
+.light-mode-toggle {
     position: fixed;
     top: 15px;
     right: 250px;
@@ -81,7 +81,7 @@ body {
 
 
 /* Light mode toggle */
-.light-mode-toggle {
+.dark-mode-toggle {
     position: fixed;
     top: 15px;
     right: 250px;
