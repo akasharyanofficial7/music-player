@@ -1,12 +1,11 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+// import Header from "../components/Header";
 import Player from "../components/Player";
 import MainSection from "../components/MainSection";
 const Home = () => {
   return (
     <div>
-      <Navbar />
-
+      {/* <Header /> */}
       <MainSection />
       <Player />
     </div>

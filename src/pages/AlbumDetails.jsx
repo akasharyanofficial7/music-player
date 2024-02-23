@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useContext, useState } from "react";
 import MusicContext from "../context/MusicContext";
-import Navbar from "../components/Navbar";
+
 import Player from "../components/Player";
 import SongList from "../components/SongList";
 
@@ -31,8 +31,6 @@ const AlbumDetails = () => {
 
   return (
     <>
-      <Navbar />
-
       <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-24 h-screen my-16 lg:my-0 mx-2 lg:mx-auto">
         <div>
           <img

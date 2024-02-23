@@ -1,10 +1,9 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Header";
 import Footer from "../components/Footer";
 const AboutPage = () => {
   return (
     <>
-      <Navbar />
       <div className="container mx-auto px-4 py-8 pt-24 text-sm lg:text-lg">
         {/* First section */}
         <div className="flex flex-col lg:flex-row items-center justify-center mb-8">
@@ -104,7 +103,6 @@ const AboutPage = () => {
         </div>
         <hr className="my-8 border-gray-300" />
       </div>
-      <Footer />
     </>
   );
 };

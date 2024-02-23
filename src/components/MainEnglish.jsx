@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import axios from "axios";
 import Slider from "./Slider";
-import Footer from "./Footer";
 
 const MainEnglish = () => {
   const [albums, setAlbums] = useState([]);
@@ -32,7 +31,7 @@ const MainEnglish = () => {
   return (
     <>
       <section className="my-20 lg:my-16">
-        <h2 className="text-xl px-5 py-8 font-semibold   w-full lg:w-[78vw] mx-auto">
+        <h2 className="text-xl px-5 py-8 font-semibold  dark:text-teal-700  w-full lg:w-[78vw] mx-auto">
           English music
         </h2>
         <Slider data={trendingAlbums} />
@@ -41,7 +40,6 @@ const MainEnglish = () => {
         </h2>
         <Slider data={albums} />
       </section>
-      <Footer />
     </>
   );
 };

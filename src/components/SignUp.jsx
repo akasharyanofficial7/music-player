@@ -11,7 +11,7 @@ const SignUp = () => {
   console.log(formData);
   return (
     <div className="  pt-20">
-      <div className="flex flex-col shadow-md shadow-slate-600 p-4  m-6 rounded-md  pt-12 mx-16 my-16 lg:mx-16 lg:my-16 md:flex-row  justify-center items-center">
+      <div className="flex flex-col    m-6 rounded-md  pt-12 mx-16 my-16 lg:mx-16 lg:my-16 md:flex-row  justify-center items-center">
         <div className="w-full md:w-1/3">
           <div className="flex flex-col justify-center items-center ">
             <div className="self-center whitespace-nowrap my-10 px-4 pb-4  lg:px-6   lg:pb-6 text-sm sm:text-xl font-semibold dark:text-white">

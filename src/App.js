@@ -9,7 +9,7 @@ import EnglishHome from "./pages/EnglishHome";
 import HindiHome from "./pages/HindiHome";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 
 import Footer from "./components/Footer";
 function App() {
@@ -98,7 +98,7 @@ function App() {
       }}
     >
       <BrowserRouter>
-        <Navbar />
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignUp />} />

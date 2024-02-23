@@ -61,59 +61,50 @@ body {
     color: #fff;
 }
 
-/* Default color for JioSaavn */
-/* .jiosaavan {
-    color: gray;
-} */
 
 /* Dark mode toggle */
 .dark-mode-toggle {
     position: fixed;
     top: 15px;
-    right: 300px;
+    right: 250px;
     z-index: 1000;
     color: #111;
     padding: 6px 8px;
-    border-radius: 4px;
+    width: 50px;
+    border-radius: 30px;
     cursor: pointer;
     font-weight: 400;
     border: 1px solid black;
     background-color: #fff;
 }
 
-/* .dark-mode-toggle:hover {
-    color: #111;
-    background-color: #fff;
-} */
+
 
 /* Light mode toggle */
 .light-mode-toggle {
     position: fixed;
     top: 15px;
-    right: 300px;
+    right: 250px;
     z-index: 1000;
     color: #111;
     padding: 6px 8px;
-    border-radius: 4px;
+    width: 50px;
+    border-radius: 30px;
     cursor: pointer;
     font-weight: 400;
     border: 1px solid #fff;
     background-color: #fff;
 }
 
-/* .light-mode-toggle:hover {
-    color: #111;
-    background-color: #fff;
-} */
 
-/* Media queries */
 @media screen and (max-width: 600px) {
 
     .dark-mode-toggle,
     .light-mode-toggle {
-        right: 15px;
-        top: 55px;
+        right: 210px;
+        top: 12px;
         padding: 2px 5px;
+
     }
 }
 

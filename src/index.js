@@ -14,18 +14,17 @@ function DarkModeWrapper() {
 
   return (
     <div className={isDarkMode ? "dark" : ""}>
-      {/* Conditionally render MdDarkMode or MdLightMode icon based on dark mode state */}
       {isDarkMode ? (
         <MdLightMode
-          className="light-mode-toggle"
+          className="light-mode-toggle dark-mode-toggle  hover:text-teal-800  h-6  w-6  text-xs  lg:h-8  lg:w-12 hover:bg-gray-300"
           onClick={toggleDarkMode}
-          size={40} // Adjust the size of the icon as needed
+          // size={35}
         />
       ) : (
         <MdDarkMode
-          className="dark-mode-toggle"
+          className="dark-mode-toggle   text-xs    hover:text-teal-800   h-6   w-6   lg:h-8  lg:w-12 hover:bg-gray-300"
           onClick={toggleDarkMode}
-          size={40} // Adjust the size of the icon as needed
+          // size={35}
         />
       )}
       <App />

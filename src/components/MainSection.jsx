@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import axios from "axios";
 import Slider from "./Slider";
-import Footer from "./Footer";
 
 const MainSection = () => {
   const [albums, setAlbums] = useState([]);
@@ -31,21 +30,20 @@ const MainSection = () => {
 
   return (
     <>
-      <section className="my-20 lg:my-16">
-        <h2 className="text-xl px-5 pt-8 pb-4 font-semibold   items-center  w-14 lg:w-[78vw] mx-auto trending">
+      <section className=" my-16 lg:my-16">
+        <h2 className="text-xl  pt-8 pb-4 font-semibold  dark:text-teal-700  items-center  w-14 lg:w-[78vw] mx-auto trending">
           Trending
         </h2>
         <Slider data={trendingAlbums} />
-        <h2 className="text-xl px-5 py-5 font-semibold   w-full lg:w-[78vw] mx-auto">
+        <h2 className="text-xl px-5 py-5 font-semibold dark:text-teal-700  w-full lg:w-[78vw] mx-auto">
           Top Albums
         </h2>
         <Slider data={albums} />
-        <h2 className="text-xl px-5 py-5 font-semibold   w-full lg:w-[78vw] mx-auto">
+        <h2 className="text-xl px-5 py-5 font-semibold  dark:text-teal-700   w-full lg:w-[78vw] mx-auto">
           All BlockBuster
         </h2>
         <Slider data={albums} />
       </section>
-      <Footer />
     </>
   );
 };
