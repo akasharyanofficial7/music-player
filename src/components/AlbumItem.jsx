@@ -12,14 +12,14 @@ const AlbumItem = ({ name, artists, id, image }) => {
         <span className="  font-semibold overflow-x-clip">
           {name.slice(0, 15)}
         </span>
-        <p className="  font-thin">
-          {artists.map((artist) => artist.name).join(", ").length > 24
+        <h1 className="  font-thin pb-4 text-xs">
+          {artists.map((artist) => artist.name).join(", ").length > 12
             ? artists
                 .map((artist) => artist.name)
                 .join(", ")
-                .slice(0, 24) + "..."
+                .slice(0, 12) + "..."
             : artists.map((artist) => artist.name).join(", ")}
-        </p>
+        </h1>
       </div>
     </Link>
   );
