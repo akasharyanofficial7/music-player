@@ -31,19 +31,19 @@ const AlbumDetails = () => {
 
   return (
     <>
-      <div className="mt-24  lg:mt-0">
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-24 h-screen my-16 lg:my-0 mx-2 lg:mx-auto">
+      <div className=" ">
+        <div className="flex mt-24  lg:mt-0 flex-col lg:flex-row justify-center items-center gap-8 lg:gap-24 h-screen my-16 lg:my-0 mx-2 lg:mx-auto">
           <div>
             <img
               src={image}
               alt={album.title}
               width={250}
-              className="mx-auto mb-4 rounded-lg"
+              className="mx-auto mb-4 rounded-lg "
             />
-            <div className="w-[250px]  ">
+            <div className="w-[250px]">
               <h1>{album.name}</h1>
-              <p>
-                by {album.primaryArtists} . {album.songCount} songs
+              <p className="text-xs  lg:text-lg">
+                by {album.primaryArtists} .{album.songCount} songs
               </p>
             </div>
           </div>

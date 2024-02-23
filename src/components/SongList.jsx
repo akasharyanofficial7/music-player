@@ -33,10 +33,10 @@ const SongsList = ({
             id === currentSong?.id && "text-[#46c7b6ff]"
           }`}
         >
-          {name}
+          {name.slice(0, 25)}...
         </span>
         <span className="font-thin text-xs text-[#46c7b6ff]">
-          {primaryArtists}
+          {primaryArtists.slice(0, 35)}
         </span>
       </div>
 
