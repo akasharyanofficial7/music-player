@@ -17,7 +17,7 @@ const AlbumDetails = () => {
     const res = await axios.get(`https://saavn.dev/albums?id=${id}`);
 
     const { data } = await res.data;
-    console.log(data);
+
     setAlbum(data);
     setSongs(data.songs);
     setImage(getImg(data.image));
@@ -32,7 +32,7 @@ const AlbumDetails = () => {
   return (
     <>
       <div className=" ">
-        <div className="flex mt-24  lg:mt-0 flex-col lg:flex-row justify-center items-center gap-8 lg:gap-24 h-screen my-16 lg:my-0 mx-2 lg:mx-auto">
+        <div className="flex mt-24 User max-h-screen lg:mt-0 flex-col lg:flex-row justify-center items-center gap-8 lg:gap-24 h-screen my-16 lg:my-0 mx-2 lg:mx-auto">
           <div>
             <img
               src={image}
