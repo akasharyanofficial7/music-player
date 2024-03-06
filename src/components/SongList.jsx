@@ -1,7 +1,6 @@
 import { GoPlay } from "react-icons/go";
 import { useContext } from "react";
 import MusicContext from "../context/MusicContext";
-
 const SongsList = ({
   name,
   primaryArtists,

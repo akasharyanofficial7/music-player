@@ -84,7 +84,7 @@ body {
 .dark-mode-toggle {
     position: fixed;
     top: 15px;
-    right: 250px;
+    right: 210px;
     z-index: 1000;
     color: #111;
     padding: 6px 8px;
