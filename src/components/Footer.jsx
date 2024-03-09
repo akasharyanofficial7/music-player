@@ -1,12 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  FaYoutube,
-  FaInstagram,
-  FaLinkedin,
-  FaTwitter,
-  FaEnvelope,
-} from "react-icons/fa";
+
+import { FaGithub, FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FiRss } from "react-icons/fi";
 
 const Footer = () => {
   return (
@@ -44,17 +40,15 @@ const Footer = () => {
             >
               Krishna Bhajan
             </Link>
-            {/* Add more devotional song links here */}
           </div>
           <div className="footer-section">
             <h3 className="text-lg font-semibold mb-4">LANGUAGE</h3>
             <Link
-              to="/hindi-songs"
+              to="/hindi"
               className="text-gray-300 hover:text-white block mb-2 sm:text-sm"
             >
               Hindi Songs
             </Link>
-            {/* Add more language links here */}
           </div>
           <div className="footer-section">
             <h3 className="text-lg font-semibold mb-4">ARTIST ORIGINALS</h3>
@@ -64,31 +58,35 @@ const Footer = () => {
             >
               Zaeden - Dooriyan
             </Link>
-            {/* Add more artist originals links here */}
           </div>
         </div>
       </div>
 
-      {/* Social Media Icons */}
       <div className="flex justify-center mt-8 space-x-4">
-        <a href="#" className="text-gray-400 hover:text-white">
-          <FaYoutube />
+        <a
+          href="https://www.linkedin.com/in/akash-gupta-41a73a184/"
+          className="text-gray-400 hover:text-yellow-400"
+        >
+          <FaLinkedinIn />
         </a>
-        <a href="#" className="text-gray-400 hover:text-white">
-          <FaInstagram />
-        </a>
-        <a href="#" className="text-gray-400 hover:text-white">
-          <FaLinkedin />
-        </a>
-        <a href="#" className="text-gray-400 hover:text-white">
+
+        <a href="#" className="text-gray-400 hover:text-yellow-400">
           <FaTwitter />
         </a>
-        <a href="#" className="text-gray-400 hover:text-white">
-          <FaEnvelope />
+        <a
+          href="https://github.com/akasharyanofficial7"
+          className="text-gray-400 hover:text-yellow-400"
+        >
+          <FaGithub />
+        </a>
+        <a href="#" className="text-gray-400 hover:text-yellow-400">
+          <FaInstagram />
+        </a>
+        <a href="#" className="text-gray-400 hover:text-yellow-400">
+          <FiRss />
         </a>
       </div>
 
-      {/* Company Info */}
       <div className="text-center mt-8">
         <p className="text-sm text-gray-500">
           JioSaavn Artist Insights | JioSaavn YourCast

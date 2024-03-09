@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 const AboutPage = () => {
   return (
     <>
-      <div className="container mx-auto px-4 py-8 pt-24 text-sm lg:text-lg">
+      <div className="container mx-auto px-4 py-8 pt-20 text-sm lg:text-lg">
         {/* First section */}
         <div className="flex flex-col lg:flex-row items-center justify-center mb-8">
           <div className="flex flex-col lg:flex-row">
@@ -12,7 +12,7 @@ const AboutPage = () => {
               <img
                 src="https://plus.unsplash.com/premium_photo-1682096504254-4b6400241e91?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODF8fG11c2ljJTIwbGlzdGVufGVufDB8fDB8fHww"
                 alt="Music App"
-                className="w-[300px]    h-full  lg:w-[500px]  lg:h-[400px]rounded-lg shadow-md"
+                className="w-[300px]  h-full  lg:w-[500px]  lg:h-[400px]rounded-lg shadow-md"
               />
             </div>
             <div className="lg:w-1/2">

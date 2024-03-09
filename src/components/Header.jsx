@@ -48,7 +48,7 @@ const Header = () => {
             type="text"
             placeholder="Search..."
             rightIcon={AiOutlineSearch}
-            className="w-[170px] lg:w-[300px] pr-8 lg:pr-0"
+            className="w-[270px] lg:w-[300px] pr-8 lg:pr-0"
             autoComplete="off"
             autoCorrect="off"
             onChange={searchSongs}
@@ -73,8 +73,8 @@ const Header = () => {
 
         <Navbar.Link>
           <div className="flex justify-between items-center pr-16 gap-1">
-            <div className="text-white">
-              <Dropdown label="Languages" inline>
+            <div className="text-white hover:text-[#46c7b6ff]">
+              <Dropdown label="Languages" inline className=" ">
                 <Dropdown.Header className="font-semibold">
                   Music List
                 </Dropdown.Header>
@@ -103,7 +103,7 @@ const Header = () => {
         </Navbar.Link>
 
         <Navbar.Link className="">
-          <div className="flex gap-2 md:order-2 pl-10 ml-10">
+          <div className="flex gap-2 md:order-2 pl-0 m ml-0 lg:pl-10 lg:ml-10">
             <Link to="/signup">
               <Button>SignUp</Button>
             </Link>
