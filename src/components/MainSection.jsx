@@ -30,8 +30,8 @@ const MainSection = () => {
 
   return (
     <>
-      <section className=" my-10 lg:my-16 pt-8">
-        <h2 className="text-xl  pt-8 pb-4 font-semibold  dark:text-teal-700  items-center  w-14 lg:w-[78vw] mx-auto trending">
+      <section className=" my-6 lg:my-6 pt-8">
+        <h2 className="text-xl  pt-2 pb-4 font-semibold  dark:text-teal-700  items-center  w-14 lg:w-[78vw] mx-auto trending">
           Trending
         </h2>
         <Slider data={trendingAlbums} className="" />

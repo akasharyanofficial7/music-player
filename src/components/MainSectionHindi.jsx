@@ -30,8 +30,8 @@ const MainSectionHindi = () => {
 
   return (
     <>
-      <section className="my-20 lg:my-16">
-        <h2 className="text-xl px-5 py-8 font-semibold  dark:text-teal-700   w-full lg:w-[78vw] mx-auto">
+      <section className="my-6 lg:my-6">
+        <h2 className="text-xl px-5 pt-12  pb-2 font-semibold  dark:text-teal-700   w-full lg:w-[78vw] mx-auto">
           Hindi music
         </h2>
         <Slider data={trendingAlbums} />

@@ -5,6 +5,7 @@ import MusicContext from "../context/MusicContext";
 
 import Player from "../components/Player";
 import SongList from "../components/SongList";
+import SearchSection from "../components/SearchSection.jsx";
 
 const AlbumDetails = () => {
   const { setSongs } = useContext(MusicContext);
@@ -31,6 +32,7 @@ const AlbumDetails = () => {
 
   return (
     <>
+      <SearchSection />
       <div className=" ">
         <div className="flex mt-24 User max-h-screen lg:mt-0 flex-col lg:flex-row justify-center items-center gap-8 lg:gap-24 h-screen my-16 lg:my-0 mx-2 lg:mx-auto">
           <div>
