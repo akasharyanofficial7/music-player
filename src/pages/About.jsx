@@ -27,7 +27,7 @@ const AboutPage = () => {
                 create playlists, explore curated collections, and enjoy
                 personalized recommendations tailored just for you.
               </p>
-              <p className="  mb-4">
+              <p className="  mb-6">
                 We're committed to providing a seamless and enjoyable music
                 streaming experience, with features like high-quality audio
                 streaming, offline listening, and easy navigation.
